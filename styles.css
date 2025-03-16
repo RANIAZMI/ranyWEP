@@ -1,0 +1,194 @@
+html, body {
+    height: 100%; 
+    margin: 0;     
+    padding: 0;    
+    display: flex; 
+    flex-direction: column; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('../IMG/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+}
+header {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff8f8;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Main content container */
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    flex-grow: 1; /* Ensures the container grows to fill available space */
+}
+
+/* Card styles */
+.card {
+    background: #222;
+    color: #e6e6e6;
+    margin: 10px;
+    padding: 15px;
+    width: 220px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 234, 0.719);
+}
+
+/* Call to action button */
+.cta {
+    text-align: center;
+    margin: 20px;
+}
+
+.cta-button {
+    background-color: #00ffcc;
+    color: #000;
+    padding: 10px 25px;
+    font-size: 1em;
+    text-decoration: none;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 255, 204, 0.3);
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #009999;
+    box-shadow: 0 8px 20px rgba(0, 255, 204, 0.6);
+}
+
+/* Footer styles */
+footer {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto; /* Pushes footer to the bottom of the page */
+    width: 100%; /* Ensures it spans the full width of the page */
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        font-size: 1.8em;
+        padding: 15px 0;
+    }
+
+    /* Navigation menu */
+    nav ul {
+        padding: 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    /* Main container */
+    .container {
+        padding: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 300px;
+        margin: 10px 0;
+    }
+
+    /* Call to action button */
+    .cta-button {
+        padding: 8px 20px;
+        font-size: 0.9em;
+    }
+}
+
+/* For smaller screens (up to 480px) */
+@media (max-width: 480px) {
+    /* Header */
+    header {
+        font-size: 1.5em;
+        padding: 10px 0;
+    }
+
+    /* Navigation menu */
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    /* Main container */
+    .container {
+        padding: 5px;
+    }
+
+    .card {
+        width: 90%;
+        margin: 10px 0;
+        padding: 10px;
+    }
+
+    .cta-button {
+        padding: 8px 18px;
+        font-size: 0.8em;
+    }
+
+    footer {
+        padding: 10px 0;
+        font-size: 0.9em;
+    }
+}

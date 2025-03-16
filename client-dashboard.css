@@ -1,0 +1,337 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images2.alphacoders.com/117/1171867.png');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff8f8;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+h4 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#biceps-curls{
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    max-width: 8%;
+    background-color: #ffffffbf;
+    margin: 10px;
+}
+
+#biceps-curls:hover {
+    background-color: rgba(255, 41, 41, 0.699);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+#hummer-curls{
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    max-width: 10%;
+    background-color: #ffffffbf;
+    margin: 10px;
+}
+#hummer-curls:hover {
+    background-color: rgba(255, 41, 41, 0.699);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Dashboard Card Styling */
+#health-data-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+#exercise-status {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    padding: 50px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 3.5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+#heart-rate-section {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    padding: 50px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 2;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.heart-section {
+    text-align: center;
+    width: 25%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.heart-container {
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
+}
+
+.heart {
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    position: relative;
+    transform: rotate(-45deg);
+    margin: 0 auto;
+    animation: heartbeat 1s infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: "";
+    width: 80px;
+    height: 80px;
+    background-color: red;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -40px;
+    left: 0;
+}
+
+.heart::after {
+    left: 40px;
+    top: 0;
+}
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(0.8) rotate(-45deg);
+    }
+    50% {
+        transform: scale(1.2) rotate(-45deg);
+    }
+}
+
+/* עיצוב אימוג'י */
+#exercise-emoji {
+    font-size: 100px;
+    line-height: 1;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#exercise-emoji.correct {
+    color: green;
+    transform: scale(1.2);
+}
+
+#exercise-emoji.incorrect {
+    color: red;
+    transform: scale(1.2) rotate(10deg);
+}
+
+#user-info {
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 1px solid #ccc;
+    padding: 50px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    font-size: 18px;
+    line-height: 3.5;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+#logoutButton{
+    padding: 10px;
+    margin: 6px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 20px;
+
+}
+#logoutButton:hover {
+    background-color: rgba(255, 41, 41, 0.699);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Footer Styling */
+
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.image-gallery a img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.image-gallery a img:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    text-align: center;
+    padding: 5px ;
+    background-color: rgba(0, 0, 0, 0.907);
+    color: #fffced;
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.8em;
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+    }
+
+    #exercise-status, #heart-rate-section, #user-info {
+        width: 90%;
+        padding: 20px;
+    }
+
+    footer {
+        font-size: 0.9em;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5em;
+        padding: 10px 0;
+    }
+
+    #exercise-status, #heart-rate-section, #user-info {
+        width: 95%;
+        padding: 15px;
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 10px 0;
+    }
+}
+/* Style for the graph container */
+#reps-graph-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #0095acc5;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Style for the graph itself */
+#repsGraph {
+    width: 100%; /* התאמה לגודל הקונטיינר */
+    max-width: 93%; /* ניתן להתאים לפי הצורך */
+    height: 300px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Optional: Responsive styling */
+@media (max-width: 768px) {
+    #reps-graph-section {
+        padding: 15px;
+    }
+
+    #repsGraph {
+        height: 250px;
+    }
+}

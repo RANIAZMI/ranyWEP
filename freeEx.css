@@ -1,0 +1,147 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images2.alphacoders.com/117/1171867.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff8f8;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.plan {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    flex: 1;
+    margin: 15px;
+    min-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.plan h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.plan ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    color: #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+        padding: 15px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        max-width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.2em;
+        padding: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .plan h2 {
+        font-size: 1.2em;
+    }
+
+    footer {
+        padding: 15px 0;
+        font-size: 0.9em;
+    }
+}

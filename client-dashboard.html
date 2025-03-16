@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="../css/client-dashboard.css">    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Adding Chart.js CDN -->
+</head>
+<body>
+    <header>
+        <h1>Client Dashboard</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="freeEx.html">Free programs</a></li>
+                <div id="logout-section">
+                    <button id="logoutButton">Logout</button>
+                </div>
+                
+                <script>
+                    document.getElementById("logoutButton").addEventListener("click", function() {
+                        alert("המשתמש נותק בהצלחה!");
+                        window.location.href = "index.html";
+                    });
+                </script>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h4>Choose your Exercise</h4>
+            <div id="biceps-curls">
+                <li id="biceps">Biceps Curls</li>
+            </div>
+            <div id="hummer-curls">
+                <li id="hummer">Hummer Curls</li>
+            </div>
+            
+            <div id="health-data-container">
+                <!-- תצוגת מצב התרגיל -->
+                <div id="exercise-status">
+                    <h2>Exercise Status: <span id="exercise-status-text">--</span></h2>
+                    <div id="emoji-container">
+                        <span id="exercise-emoji"></span> <!-- אלמנט האימוג'י -->
+                    </div>
+                </div>
+
+                <!-- תצוגת דופק -->
+                <div id="heart-rate-section" class="heart-section">
+                    <h2>Heart Rate</h2>
+                    <div class="heart-container">
+                        <div class="heart"></div>
+                        <h1><span id="heart-rate">--</span></h1>
+                    </div>
+                </div>
+                
+                <!-- תצוגת פרטים אישיים -->
+                <div id="user-info">
+                    <h3>Name: <span id="Name">--</span></h3>
+                    <h3>Height: <span id="height">--</span> cm</h3>
+                    <h3>Weight: <span id="weight">--</span> kg</h3>
+                </div>
+            </div>
+            
+            <!-- Graph Section for Gym Reps -->
+            <div id="reps-graph-section">
+                <h2>Gym Reps Over Time</h2>
+                <canvas id="repsGraph" width="400" height="200"></canvas>
+            </div>
+
+            <div class="image-gallery">
+                <a href="https://www.youtube.com" target="_blank">
+                    <img src="https://th.bing.com/th/id/R.7e57aba3f71120269a69068ede25b435?rik=EMbdyK5WJWHaQQ&pid=ImgRaw&r=0/100" alt="YouTube">
+                </a>
+                <a href="https://www.twitter.com" target="_blank">
+                    <img src="https://th.bing.com/th/id/R.c9171a34206a47205c561d0babdc5992?rik=FDU9sarTJjn%2bNg&riu=http%3a%2f%2ftonilpkelner.com%2fwp-content%2fuploads%2f2019%2f04%2ftwtr-19.png&ehk=6p5Vx%2bejDaZPoYIX58NL7QhGx1SAiF%2baje8VM%2f842W0%3d&risl=&pid=ImgRaw&r=0/100" alt="Twitter">
+                </a>
+                <a href="https://www.facebook.com" target="_blank">
+                    <img src="https://eggstack.com/blog/blog-images/eggstack-facebook-follow-button.png" alt="Facebook">
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>2024 Smart Fitness Device. All rights reserved.</p>
+    </footer>
+
+    <script type="module" src="../js/dashboard.js"></script>
+</body>
+</html>

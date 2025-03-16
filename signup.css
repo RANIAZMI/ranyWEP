@@ -1,0 +1,171 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images2.alphacoders.com/117/1171867.png');
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.85);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff8f8;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+.signup-container {
+    max-width: 500px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.signup-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+input[type="text"], input[type="email"], input[type="password"], textarea, select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+    width: 95%;
+}
+
+input[type="submit"] {
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#signup-button {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+
+}
+
+footer {
+    background-color: #1a1a1a;
+    color: #e6e6e6;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: auto; /* Pushes footer to the bottom of the page */
+    width: 100%;
+
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    header {
+        font-size: 1.8em;
+        padding: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+        padding: 8px 10px;
+    }
+
+    .signup-container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    input[type="submit"] {
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 1.5em;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+        padding: 5px;
+    }
+
+    .signup-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer {
+        padding: 15px 0;
+        font-size: 0.9em;
+    }
+}
