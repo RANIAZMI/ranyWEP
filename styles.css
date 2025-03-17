@@ -7,6 +7,7 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url('https://images2.alphacoders.com/117/1171867.png');
     background-size: cover;
+    background-position: center;
     color: #ffffff;
 }
 header {
