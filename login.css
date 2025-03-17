@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('background.jpg') no-repeat center center fixed;
+     background-image: url('https://images2.alphacoders.com/117/1171867.png');
     background-size: cover;
     background-position: center;
 }
