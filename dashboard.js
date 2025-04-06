@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", () => {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log("User is signed in:", user.uid);
-            fetchUserData(user.uid);
+            
         } else {
             console.log("No user is signed in. Redirecting to login page.");
             window.location.href = "login.html"; // הפניה לדף התחברות אם אין משתמש מחובר
@@ -79,25 +79,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // פונקציה למשיכת נתונים מהמסד נתונים
-    function fetchUserData(uid) {
-        const userRef = ref(database, `users/${uid}`);
-        onValue(userRef, (snapshot) => {
-            const userData = snapshot.val();
-            if (userData) {
+   
+    onValue(ref(database, "/RX/TX/B"), (snapshot) => {
+        const value = snapshot.val();
+           
                 console.log("User data retrieved:", userData);
                 nameElement.textContent = `${userData.firstName} ${userData.lastName}`;
                 heightElement.textContent = userData.height ? `${userData.height}` : "--";
                 weightElement.textContent = userData.weight ? `${userData.weight}` : "--";
-                if (userData.heartRate) {
-                    heartRateElement.textContent = `${userData.heartRate} bpm`;
+               
+                    heartRateElement.textContent = `${value} bpm`;
                     const animationSpeed = 40 / userData.heartRate;
                     heartElement.style.animationDuration = `${animationSpeed}s`;
                 }
-            } else {
-                console.error("No user data found.");
-            }
-        });
-    }
+           
+                
+            
+        );
+    
 
     // מאזין לשינויי סטטוס תרגיל ב-Firebase
     onValue(ref(database, "/RX/TX/A"), (snapshot) => {
@@ -177,6 +176,11 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("hummer").addEventListener("click", () => {
         sendExerciseData(1);
     });
+
+    document.getElementById("push-up").addEventListener("click", () => {
+        sendExerciseData(3);
+    });
+    
 
     // פונקציה ליציאת משתמש
     document.getElementById("logoutButton").addEventListener("click", () => {
