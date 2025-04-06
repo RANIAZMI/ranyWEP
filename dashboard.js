@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // מאזינים ללחיצות על הכפתורים
     document.getElementById("biceps").addEventListener("click", () => {
-        sendExerciseData(0);
+        sendExerciseData(2);
     });
 
     document.getElementById("hummer").addEventListener("click", () => {
