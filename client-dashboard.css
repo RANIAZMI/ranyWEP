@@ -64,6 +64,8 @@ h4 {
     max-width: 8%;
     background-color: #ffffffbf;
     margin: 10px;
+     background-color: #08c117;
+
 }
 
 #biceps-curls:hover {
@@ -81,6 +83,8 @@ h4 {
     max-width: 8%;
     background-color: #ffffffbf;
     margin: 10px;
+    background-color: #f90a0a;
+
 }
 
 #push-ups:hover {
@@ -98,6 +102,8 @@ h4 {
     max-width: 10%;
     background-color: #ffffffbf;
     margin: 10px;
+    background-color: #ffff3d;
+
 }
 #hummer-curls:hover {
     background-color: rgba(255, 41, 41, 0.699);
