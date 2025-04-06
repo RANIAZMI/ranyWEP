@@ -72,6 +72,23 @@ h4 {
     transform: scale(1.1);
 }
 
+#push-ups{
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    max-width: 8%;
+    background-color: #ffffffbf;
+    margin: 10px;
+}
+
+#push-ups:hover {
+    background-color: rgba(255, 41, 41, 0.699);
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
 #hummer-curls{
     padding: 15px;
     border: none;
