@@ -68,34 +68,48 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // בדיקה אם משתמש מחובר
-    onAuthStateChanged(auth, (user) => {
+   onAuthStateChanged(auth, (user) => {
         if (user) {
             console.log("User is signed in:", user.uid);
-            
-        } else {
-            console.log("No user is signed in. Redirecting to login page.");
-            window.location.href = "login.html"; // הפניה לדף התחברות אם אין משתמש מחובר
-        }
-    });
-
-    // פונקציה למשיכת נתונים מהמסד נתונים
-   
-    onValue(ref(database, "/RX/TX/B"), (snapshot) => {
-        const value = snapshot.val();
-           
+    
+            // שליפת מידע המשתמש לפי UID
+            const userRef = ref(database, `/users/${user.uid}`);
+            onValue(userRef, (userSnapshot) => {
+                const userData = userSnapshot.val();
+                if (!userData) {
+                    console.error("User data not found in database.");
+                    return;
+                }
+    
+                // הצגת נתוני משתמש
                 console.log("User data retrieved:", userData);
                 nameElement.textContent = `${userData.firstName} ${userData.lastName}`;
                 heightElement.textContent = userData.height ? `${userData.height}` : "--";
                 weightElement.textContent = userData.weight ? `${userData.weight}` : "--";
-               
-                    heartRateElement.textContent = `${value} bpm`;
-                    const animationSpeed = 40 / userData.heartRate;
+            });
+    
+            // האזנה לנתוני דופק (B)
+            const heartRef = ref(database, "/RX/TX/B");
+            onValue(heartRef, (snapshot) => {
+                const value = snapshot.val();
+                const heartRate = parseFloat(value);
+    
+                if (!isNaN(heartRate)) {
+                    heartRateElement.textContent = `${heartRate} bpm`;
+                    const animationSpeed = 40 / heartRate;
                     heartElement.style.animationDuration = `${animationSpeed}s`;
+                } else {
+                    heartRateElement.textContent = "--";
+                    heartElement.style.animationDuration = "1s";
                 }
-           
-                
-            
-        );
+            });
+    
+        } else {
+            console.log("No user is signed in. Redirecting to login page.");
+            window.location.href = "login.html";
+        }
+    });
+    
     
 
     // מאזין לשינויי סטטוס תרגיל ב-Firebase
