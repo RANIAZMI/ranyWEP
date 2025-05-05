@@ -89,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
             });
     
             // האזנה לנתוני דופק (B)
-            const heartRef = ref(database, "/RX/TX/B");
+            const heartRef = ref(database, "/RX/TX/D");
             onValue(heartRef, (snapshot) => {
                 const value = snapshot.val();
                 const heartRate = parseFloat(value);
